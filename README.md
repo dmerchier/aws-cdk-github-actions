@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: cdk diff
-        uses: guychauliac/aws-cdk-github-actions@v3.0.0
+        uses: dmerchier/aws-cdk-github-actions@v3
         with:
           cdk_subcommand: 'diff'
           actions_comment: true
@@ -35,7 +35,7 @@ jobs:
           AWS_DEFAULT_REGION: 'ap-northeast-1'
 
       - name: cdk deploy
-        uses: youyo/aws-cdk-github-actions@v2
+        uses: dmerchier/aws-cdk-github-actions@v3
         with:
           cdk_subcommand: 'deploy'
            cdk_args: '--require-approval never'
@@ -46,7 +46,7 @@ jobs:
           AWS_DEFAULT_REGION: 'ap-northeast-1'
 
       - name: cdk synth
-        uses: youyo/aws-cdk-github-actions@v2
+        uses: dmerchier/aws-cdk-github-actions@v3
         with:
           cdk_subcommand: 'synth'
           cdk_version: '1.16.2'
